@@ -1,6 +1,10 @@
-package xunit;
+package main.java.xunit;
 
-public class XUnitTest {
+import main.java.xunit.testcase.TestResult;
+import main.java.xunit.testcase.TestSuite;
+import test.java.xunit.TestCaseTest;
+
+public class XUnitApplication {
 
     public static void main(String[] args) {
         TestSuite suite = TestCaseTest.suite();

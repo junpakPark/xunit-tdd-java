@@ -1,4 +1,4 @@
-package xunit;
+package main.java.xunit.testcase;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +13,7 @@ public class TestSuite implements Test {
 
     public TestSuite(final Class<? extends TestCase> testClass) {
         Arrays.stream(testClass.getDeclaredMethods())
-                .filter(method -> method.getAnnotation(xunit.annotation.Test.class) != null)
+                .filter(method -> method.getAnnotation(main.java.xunit.annotation.Test.class) != null)
                 .forEach(method -> {
                     try {
                         add(testClass.getConstructor(String.class).newInstance(method.getName()));

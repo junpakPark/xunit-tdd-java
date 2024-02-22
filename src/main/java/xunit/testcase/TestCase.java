@@ -1,4 +1,4 @@
-package xunit;
+package main.java.xunit.testcase;
 
 import java.lang.reflect.Method;
 

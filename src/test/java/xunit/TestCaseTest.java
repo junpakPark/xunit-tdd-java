@@ -1,6 +1,11 @@
-package xunit;
+package test.java.xunit;
 
-import xunit.annotation.Test;
+import main.java.xunit.annotation.Test;
+import main.java.xunit.testcase.Assert;
+import main.java.xunit.testcase.TestCase;
+import main.java.xunit.testcase.TestResult;
+import main.java.xunit.testcase.TestSuite;
+import main.java.xunit.testcase.WasRun;
 
 public class TestCaseTest extends TestCase {
 

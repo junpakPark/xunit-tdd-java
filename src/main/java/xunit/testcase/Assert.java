@@ -1,4 +1,4 @@
-package xunit;
+package main.java.xunit.testcase;
 
 public class Assert {
     public static void assertEquals(final Object expected, final Object actual) {
