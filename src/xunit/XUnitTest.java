@@ -7,6 +7,7 @@ public class XUnitTest {
         System.out.println(new TestCaseTest("testResult").run().getSummary());
         System.out.println(new TestCaseTest("testFailedResultFormatting").run().getSummary());
         System.out.println(new TestCaseTest("testFailedResult").run().getSummary());
+        System.out.println(new TestCaseTest("testSuite").run().getSummary());
     }
 
 }
