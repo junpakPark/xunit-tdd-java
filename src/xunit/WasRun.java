@@ -16,4 +16,5 @@ public class WasRun extends TestCase {
     public void testMethod() {
         log += " testMethod";
     }
+
 }
