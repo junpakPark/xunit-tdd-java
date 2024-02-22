@@ -13,7 +13,7 @@ public class TestSuite implements Test {
 
     public TestSuite(final Class<? extends TestCase> testClass) {
         Arrays.stream(testClass.getDeclaredMethods())
-                .filter(method -> method.getName().startsWith("test"))
+                .filter(method -> method.getAnnotation(xunit.annotation.Test.class) != null)
                 .forEach(method -> {
                     try {
                         add(testClass.getConstructor(String.class).newInstance(method.getName()));
@@ -21,7 +21,6 @@ public class TestSuite implements Test {
                         throw new RuntimeException(e);
                     }
                 });
-
     }
 
     public void add(final Test test) {

@@ -9,7 +9,7 @@ public class XUnitTest {
         System.out.println(result.getSummary());
 
         TestSuite suite2 = new TestSuite();
-        suite2.add(new TestCaseTest("testTemplateMethod"));
+        suite2.add(new TestCaseTest("templateMethodTest"));
         suite2.add(suite);
         TestResult result2 = new TestResult();
         suite2.run(result2);
