@@ -1,11 +1,17 @@
 package xunit;
 
-public class TestSuite {
-    public void add(final WasRun test) {
+import java.util.ArrayList;
+import java.util.List;
 
+public class TestSuite {
+
+    List<WasRun> tests = new ArrayList<>();
+
+    public void add(final WasRun test) {
+        tests.add(test);
     }
 
-    public TestResult run() {
-        return null;
+    public void run(final TestResult result) {
+        tests.forEach(test -> test.run(result));
     }
 }
