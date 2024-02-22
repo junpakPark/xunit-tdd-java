@@ -10,7 +10,7 @@ public class TestCase {
         this.name = name;
     }
 
-    public void run() {
+    public TestResult run() {
         setUp();
 
         try {
@@ -21,10 +21,13 @@ public class TestCase {
         }
 
         tearDown();
+
+        return new TestResult();
     }
 
     // 아래 메서드들은 모든 테스트 케이스에서 동일한 이름을 사용하기 때문에 SuperClass에 위치시킨다.
-    public void setUp() {}
+    public void setUp() {
+    }
 
     public void tearDown() {
     }
