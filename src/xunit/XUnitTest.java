@@ -3,10 +3,17 @@ package xunit;
 public class XUnitTest {
 
     public static void main(String[] args) {
-        System.out.println(new TestCaseTest("testTemplateMethod").run().getSummary());
-        System.out.println(new TestCaseTest("testResult").run().getSummary());
-        System.out.println(new TestCaseTest("testFailedResultFormatting").run().getSummary());
-        System.out.println(new TestCaseTest("testFailedResult").run().getSummary());
+        TestSuite suite = TestCaseTest.suite();
+        TestResult result = new TestResult();
+        suite.run(result);
+        System.out.println(result.getSummary());
+
+        TestSuite suite2 = new TestSuite();
+        suite2.add(new TestCaseTest("templateMethodTest"));
+        suite2.add(suite);
+        TestResult result2 = new TestResult();
+        suite2.run(result2);
+        System.out.println(result2.getSummary());
     }
 
 }
