@@ -11,6 +11,8 @@ public class TestCase {
     }
 
     public void run() {
+        setUp();
+
         try {
             Method method = getClass().getMethod(name);
             method.invoke(this);
@@ -18,4 +20,7 @@ public class TestCase {
             throw new RuntimeException(e);
         }
     }
+
+    // setUp은 모든 테스트 케이스에서 동일한 이름을 사용하기 때문에 SuperClass에 위치시킨다.
+    public void setUp() {}
 }
